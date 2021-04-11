@@ -18,7 +18,7 @@
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
-    _FN
+    _LAYER1
 };
 
 // Defines the keycodes used by our macros in process_record_user
@@ -30,7 +30,10 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT(
-        KC_A, KC_B, KC_C, KC_D
+        TG(1), KC_A, KC_B, KC_C, KC_D
+    ),
+    [_LAYER1] = LAYOUT(
+        KC_TRNS, KC_E, KC_F, KC_G, KC_H
     )
 };
 

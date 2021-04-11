@@ -58,3 +58,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+
+#ifdef OLED_DRIVER_ENABLE
+void oled_task_user(void) {
+    oled_write_ln_P(PSTR("Hello World,"), false);
+    oled_write_ln_P(PSTR(""), false);
+    oled_write_P(PSTR("MODE: "), false);
+
+    switch (get_highest_layer(layer_state)) {
+        case _BASE:
+            oled_write_P(PSTR("1"), false);
+            break;
+        case _LAYER1:
+            oled_write_P(PSTR("2"), false);
+            break;
+        default:
+            // Or use the write_ln shortcut over adding '\n' to the end of your string
+            oled_write_ln_P(PSTR("Undefined"), false);
+    }
+}
+#endif

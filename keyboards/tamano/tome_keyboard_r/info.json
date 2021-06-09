@@ -2,8 +2,8 @@
     "keyboard_name": "tome_keyboard_r",
     "url": "",
     "maintainer": "Yuya TAMANO",
-    "width": 3,
-    "height": 2,
+    "width": 4,
+    "height": 5,
     "layouts": {
         "LAYOUT": {
             "layout": [

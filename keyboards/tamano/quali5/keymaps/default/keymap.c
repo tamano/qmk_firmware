@@ -78,8 +78,7 @@ void oled_task_user(void) {
             oled_write_ln_P(PSTR("Undefined"), false);
     }
 
-    oled_write_P(PSTR("\n"), false);
-    oled_write_P(PSTR("\n"), false);
+    oled_write_P(PSTR("\n\n"), false);
 
     switch (get_highest_layer(layer_state)) {
         case _BASE:

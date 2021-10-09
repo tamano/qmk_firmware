@@ -22,3 +22,4 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 
 OLED_DRIVER_ENABLE = yes
+VIA_ENABLE = yes
